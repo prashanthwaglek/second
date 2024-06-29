@@ -12,6 +12,7 @@ resource "aws_subnet" "mysubnetprod" {
   cidr_block = var.myvpcsubcidr
   vpc_id = aws_vpc.myvpcprod.id
   depends_on = [ aws_vpc.myvpcprod ]
+  availability_zone = "ap-south-1a"
 }
 
 #VM creation
